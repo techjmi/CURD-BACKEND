@@ -1,0 +1,10 @@
+const express= require("express")
+const { addUser, fetchUser, fetchByid, editUser, deleteUser } = require("../controller/use-controller")
+// const { addUser } = require("../controller/use-controller")
+const route= express.Router()
+route.post('/adduser',addUser)
+route.get('/getuser',fetchUser)
+route.get('/byid/:id',fetchByid)
+route.put('/edit/:id',editUser)
+route.delete('/delete/:id',deleteUser)
+module.exports= route
